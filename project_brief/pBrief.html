@@ -1,1 +1,57 @@
-//this is project Brief
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+
+        <title>Project Brief</title>
+
+        <style>
+            html {
+                font-family: sans-serif;
+            }
+            body {
+                width: 50%;
+                max-width: 800px;
+                min-width: 480px;
+                margin: 0 auto;
+            }
+            
+            .lastResult{
+                color: white;
+                padding: 3px;
+            }
+
+        </style>
+    </head>
+
+    <body>
+        <h1>Thi is project brief</h1>
+        <br>
+        <div class = "name">
+            <label for='stringField'>Enter a cutomer name: </label><input type="text" id="guessField" class="guessField">
+        </div>
+        <br>
+        <br>
+        <div class = "nationality">
+            <input type="checkbox" name="nationality1" value="uk"> UK <br>
+            <input type="checkbox" name="nationality2" value="us"> US <br>
+        </div>
+
+        <input type="submit" value="Submit for story!" class="nameSubmit">
+
+        <div class = "returnString">
+            <p class="lastResult"></p>
+        </div>
+        
+        <script>
+            var lastResult = document.querySelector('.lastResult');
+
+            function brief(){
+                var name = String(stringField.value);
+            }
+
+
+        </script>
+    </body>
+</html>
