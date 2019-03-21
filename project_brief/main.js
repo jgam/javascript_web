@@ -34,7 +34,7 @@ function result() {
     var xItem = randomValueFromArray(insertX);
     var yItem = randomValueFromArray(insertY);
     var zItem = randomValueFromArray(insertZ);
-    
+
     newStory = newStory.replace(":insertx:", xItem);
     newStory = newStory.replace(":insertx:", xItem);
     newStory = newStory.replace(":inserty:", yItem);
@@ -52,7 +52,7 @@ function result() {
     var temperature =  Math.round((94-32)*5/9) + " Celcius";
     
     newStory = newStory.replace("300 pounds", weight);
-    newStory = newStory.replace("94 farenheit", temperature);
+    newStory = newStory.replace("94 fahrenheit", temperature);
 
     }
 
