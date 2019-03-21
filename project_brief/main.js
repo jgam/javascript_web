@@ -29,18 +29,32 @@ var insertZ = [
 randomize.addEventListener('click', result);
 
 function result() {
+    var newStory = storyText;//needed to create a new random story each time the button is pressed
+    //and the function is run
+    var xItem = randomValueFromArray(insertX);
+    var yItem = randomValueFromArray(insertY);
+    var zItem = randomValueFromArray(insertZ);
 
+    newStory = newStory.replace(":insertx", xItem);
+    newStory = newStory.replace(":inserty", yItem);
+    newStory = newStory.replace(":insertz", zItem);
     if(customName.value !== '') {
     var name = customName.value;
+    //add another string replacement method call to rplace the name'bob' found in newStory
+    //with the name variable
+    newStory = newStory.replace("Bob", name);
 
     }
 
     if(document.getElementById("uk").checked) {
-    var weight = Math.round(300);
-    var temperature =  Math.round(94);
+    var weight = Math.round(300*0.453592) + " Kilograms";
+    var temperature =  Math.round((94-32)*5/9) + " Celcius";
+    
+    newStory = newStory.replace("300 pounds", weight);
+    newStory = newStory.replace("94 farenheit", temperature);
 
     }
 
-    story.textContent = ;
+    story.textContent = newStory;
     story.style.visibility = 'visible';
 }
